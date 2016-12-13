@@ -174,27 +174,81 @@
       <!-- START THE FEATURETTES -->
 
       <hr class="featurette-divider">
+        <div class="row featurette" id="theData">
+          <div class="col-md-12">
+            <h2 class="featurette-heading">Overview</h2>
+            <p>Airbnb is a peer-to-peer online marketplace and homestay network enabling people to list or rent short-term lodging in residential properties, with the cost of such accommodation set by the property owner.  With thousands of property owners listing their property for short-term lodging, the marketplace for lodging has become very competitive. The success of Airbnb can be attributed to the information, decision power and functionality that it places in the hands of property owners.   In order to be competitive in the marketplace, it is essential that property owners have the most up to date information about the housing market.  This information must be catered to the specific location, property type and lease date for their property.</p>
+            <p>
+            The decision of pricing a property on specific dates is a critical decision that every Airbnb client must address.  The housing market is volatile.  Per Diem rates can have extreme fluctuations from day to day and these fluctuations can be based on several factors such as day of week, month, holidays, local events, competitor’s prices along with hundreds of other possible factors.
+            </p>
+            <p>The goal of our research is to develop a predictive model that will provide the property owner with a competitive target price on specific dates for their property.  This model will empower Airbnb property owners to competitively price their property and provide renters a fair market price.</p>
+          </div>
+        </div>
 
-      <div class="row featurette" id="theData">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">The Data. <span class="text-muted">It'll blow your mind.</span></h2>
-          <p class="lead">Everything you need to know how we got the data, how we organized the data, and how we dealt with problems in the data. </p>
-          <p>The raw data from this website was collected from: <a href="http://data.beta.nyc/dataset/inside-airbnb-data">InsideAirbnb</a></p>
-          <p>The data was orginized into 3 categories: <u><b>Calendar</b></u>, <u><b>Reviews</b></u>, and <u><b>Listings</b></u>. Each of these categories contianed the various variables that identified the AirBnB property, as well as the relavent information that could potentially be a determining factor in the pricing of these factories. Some of the most relevant variables are on the word cloud to the right. </p>
-          <h3>The Size of the Data</h3>
-          <p>There is a total of about 27,000 listings in the listings data set, each with 52 features. The calendar dataset contains one entry for each day of the year for each of the approximately 27,000 listings. Thereviews dataset contains about 28,000 reviews for about 19,000 distinct listings.</p>
-          <h3>Organizing the Data</h3>
-          <p>The data from the data.beta.nyc website returned data in CSV rows, which we were able to feed into the <a href="http://pandas.pydata.org/">Pandas</a> database. The input was pretty straight forward. However there were occasional formatting irregularities throughout the data that have been fixed. For example, some fields contained excess parentheses or string data types where floats or booleans are more appropriate. The price fields were originally encoded as strings with dollar signs and comma values. These were converted to floats for use in learning models.</p>
+        <div class="row featurette" id="theData">
+          <div class="col-md-12">
+            <h2 class="featurette-heading">Literature Review:</h2>
+            <p>Since the inception of “shared economy”, there have been dozens of articles and scholarly papers written about Airbnb along with other peer-to-peer homestay networking sites.  Although the researchers of this project reviewed several of these papers, we present the detailed overview of two of the most relevant papers for this literature review:</p>
+
+            <h3><a href="https://www.mapr.com/blog/predicting-airbnb-listing-prices-scikit-learn-and-apache-spark">Predicting Airbnb Listing Prices with Scikit-Learn and Apache Spark</a></h3>
+            <p></p>
+            <p>The online article titled “Predicting Airbnb Listing Prices with Scikit-Learn and Apache Spark” by Nick Amato was published on April 20th, 2016 on the Mapr blog site.  This article details the construction of a predictive model using python’s Scikit-Learn package in combination with Apache Spark for performance enhancement.  This model leverages the publically available dataset titled “Inside Airbnb” published by Airbnb and focuses on the San Francisco area.</p>
+
+            <p>
+            The article walks the reader through the step-by-step process of building and evaluating a predictive model using publically available data.  In the first section, the author explains the available data sources and provides python code for accessing and evaluating some core features of the data. This initial analysis demonstrates the raw nature of the data and the need to clean the data.  In order to create a concise model, the author limits the data to Airbnb listings in the San Francisco area with one bedroom.  This filter captures the majority of the available listings and limits the possible complex interactions involved in a broad study of all listing types.    
+            </p>
+
+            <p>Once the author limits the data to a select number of features, he cleans the data by replacing missing values for the ‘reviews_per_month’ field from NaN to 0.  He also cleans the data by filtering out any listings where there are missing values for price, bedrooms and beds.  The next step is to recode the categorical variables into dummy variables (values of 1 or 0) by using the ‘get_dummies’ feature of Scikit-Learn.  This technique allows the model to incorporate the categorical data into the model as unique numeric features. An analysis of the scatter plot matrix shows that there is not an issue with correlation that would need to be addressed. </p>
+
+            <p>The author uses several predictive models from the Scikit-Learn package to demonstrate the differences in predictive performance by using the median squared error metric to evaluate model fit. The models that were initially developed were: linear regression, ridge and lasso regressions, ElasticNet, Bayesian ridge and Orthogonal Matching Pursuit.  A comparison of the model outputs shows that the Bayesian ridge model provides the lowest error from the six candidate models.  The error is translated into dollars in order to be consistent with the project goal of predicting prices.  The Bayesian ridge model results in an error of $30 - $35 dollars. </p>
+
+            <p>The next step is to implement a model tuning algorithm.  For this process, the author uses the GridSearchCV function from the Scikit-Learn package.  The GridSearchCV function is an ensemble model that explores a large variety of hyperparameters  through an exhaustive search process.  This process tries all the supplied parameter combinations and uses cross-validation to find the best one.  The concern with this approach is that it requires a lot of CPU processing power and time.  In order to process the exhaustive grid search efficiently, the author uses Apache Spark to distribute the process across several machines and cores.  The author uses the GradientBosstingRegressor predictive model in combination with the GridSearchCV cross-validation technique on the Apache Spark system to achieve an error rate of $21.43.</p>
+
+            <p>Conclusion</p>
+            <p>This article provided an excellent step-by-step look at developing several predictive models and assessing the accuracy of those models.  The author also demonstrated how Apache Spark can be leveraged to increase processing efficiency and allow the full range of exhaustive search methods to be employed in model development.</p>
+
+            <h3><a href="http://cs229.stanford.edu/proj2015/236_report.pdf">Neighborhood and Price Prediction for San Francisco Airbnb Listings</a></h3>
+
+            <p>In ``Neighborhood and Price Prediction for San Francisco Airbnb Listings'', Tang and Sangani explore data from the Inside Airbnb project, containing a complete set of 7,029 listings of properties for rent on Airbnb in San Francisco as of November 2, 2015. For each listing, the data set contains the price per night, text information, such as the name of the listing and a description of the property and host, an image of the property, and a number fields describing quantifiable attributes of the property, such as amenities offered and square-footage. With these data, the authors seek to predict two attributes of a listing, the price per night, and the neighborhood in which the property is located. </p>
+
+            <p>The authors choose these metrics for their potential usefulness to Airbnb's platform. In particular, predicting price may allow Airbnb to offer improved suggested pricing for hosts ready to list while predicting neighborhood could provide a first step towards recommending new properties to clients based on where they have stayed in the past. The authors make several interesting decisions about how to approach the tasks of predicting price and neighborhood. 
+            </p>
+
+            <p>Rather than attempting to predict price as a continuous variable, a binary response variable for price is created that indicates whether the predicted price is above or below the median price in the data set. This method has the advantage of simplifying both the price prediction task and the evaluation of the goodness of the model. However, disadvantages of this approach include that simple linear regression is no longer a suitable option to model the price response variable, and that the results of the prediction are of limited usefulness, especially for the application of suggesting pricing to hosts. </p>
+
+            <p>Additionally, in the data cleaning phase, all observations in neighborhoods containing 70 or fewer listings are removed. While this reduces the burden on the neighborhood classifier, it also restricts the model's usefulness to neighborhoods with a relatively high number of listings. </p>
+
+            <p>The majority of the work is done in extracting features from the data set in order to prepare the data for modeling. A total of five features are chosen: listing information features, bag of words features, word class features, text sentiment features, and visual features. The authors employ a variety of techniques in order to extract these features. Interestingly, pre-developed packages are used to do the majority of processing for all but the listing information feature. In particular, packages from the Natural Language Toolkit such as Porter-Stemmer seem to be useful for the processing of hand-written data into quantifiable features. Similarly, OpenCV's libraries for extracting SURF features from images appear useful for the processing of the images associated with the listings. </p>
+
+            <p>After creating a feature vector for each listing, two support vector machine models are trained to predict each of the response variables. The choice of SVM classifier is not explained; although, given the large number of features, the choice seems reasonable. Nevertheless, alternative methods may be worth investigation. Two major adjustments are needed to improve the models. First, the optimal value of the regularization parameter is experimentally determined by grid search. Second, high variance in the initial model indicates that overfitting is likely. In order to combat this, the authors use the Recursive Feature Elimination functionality in sklearn to reduce the degrees of freedom in the SVM. </p>
+
+            <p>Conclusion</p>
+
+            <p>The final models for both price and neighborhood have impressive predictive power. In the test set, prices are categorized to the correct group (either above or below the median) with approximately 81% accuracy, while neighborhoods are categorized with 42% accuracy. While this performance seems good, the authors note that discretization of the predicted price into smaller bins is likely necessary for most applications, and is a promising direction for future work.</p>
+
+          </div>
         </div>
-        <div class="col-md-5" style="margin-top: 50px;">
-          <img class="featurette-image img-responsive center-block" src="bootstrap-3.3.7/docs/images/wordcloud.png" alt="Generic placeholder image">
+
+        <div class="row featurette" id="theData">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">The Data. <span class="text-muted">It'll blow your mind.</span></h2>
+            <p class="lead">Everything you need to know how we got the data, how we organized the data, and how we dealt with problems in the data. </p>
+            <p>The raw data from this website was collected from: <a href="http://data.beta.nyc/dataset/inside-airbnb-data">InsideAirbnb</a></p>
+            <p>The data was orginized into 3 categories: <u><b>Calendar</b></u> and <u><b>Listings</b></u>. Each of these categories contianed the various variables that identified the AirBnB property, as well as the relavent information that could potentially be a determining factor in the pricing of these factories. Some of the most relevant variables are on the word cloud to the right. </p>
+            <h3>The Size of the Data</h3>
+            <p>There is a total of about 27,000 listings in the listings data set, each with 52 features. The calendar dataset contains one entry for each day of the year for each of the approximately 27,000 listings.</p>
+            <h3>Organizing the Data</h3>
+            <p>The data from the data.beta.nyc website returned data in CSV rows, which we were able to feed into the <a href="http://pandas.pydata.org/">Pandas</a> database. The input was pretty straight forward. However there were occasional formatting irregularities throughout the data that have been fixed. For example, some fields contained excess parentheses or string data types where floats or booleans are more appropriate. The price fields were originally encoded as strings with dollar signs and comma values. These were converted to floats for use in learning models.</p>
+          </div>
+          <div class="col-md-5" style="margin-top: 50px;">
+            <img class="featurette-image img-responsive center-block" src="bootstrap-3.3.7/docs/images/wordcloud.png" alt="Generic placeholder image">
+          </div>
+          <div class="col-md-12">
+            <h3>Filling in the Gaps of Missing Data</h3>
+            <p>While the datasets are nearly complete, there are a significant number of missing values. In the listings dataset, roughly 30% of all review scores, the vast majority of the square footage values, and low percentages of other listing characteristics are missing. In the calendar dataset, 28% of the listing dates do not have price information.</p>
+            <p>The missing values were handled in various ways to suit the nature of the data. Missing price data is a roadblock because it is inadvisable to attempt to impute missing response variables. Thus, records with missing price data are dropped. For categorical variables, it is imaginable that knowing which listings have descriptors absent is associated with the price (likely in a negative fashion). Therefore, missing categorical values were replaced with a new category &#39;unspecified&#39;. Missing review values were imputed with the global mean, as the correlation between price and the majority of review metrics is so low that attempting to use regression for imputation would be useless. Likewise, the data are too noisy for K-nearest neighbor to be of use. For other continuous feature variables such as bedrooms, bathrooms, and beds with relatively high correlation with price, missing values were imputed using linear regression.</p>
+          </div>
         </div>
-        <div class="col-md-12">
-          <h3>Filling in the Gaps of Missing Data</h3>
-          <p>While the datasets are nearly complete, there are a significant number of missing values. In the listings dataset, roughly 30% of all review scores, the vast majority of the square footage values, and low percentages of other listing characteristics are missing. In the calendar dataset, 28% of the listing dates do not have price information. In the reviews dataset, an insignificant number of comments are missing.</p>
-          <p>The missing values were handled in various ways to suit the nature of the data. Missing price data is a roadblock because it is inadvisable to attempt to impute missing response variables. Thus, records with missing price data are dropped. For categorical variables, it is imaginable that knowing which listings have descriptors absent is associated with the price (likely in a negative fashion). Therefore, missing categorical values were replaced with a new category &#39;unspecified&#39;. Missing review values were imputed with the global mean, as the correlation between price and the majority of review metrics is so low that attempting to use regression for imputation would be useless. Likewise, the data are too noisy for K-nearest neighbor to be of use. For other continuous feature variables such as bedrooms, bathrooms, and beds with relatively high correlation with price, missing values were imputed using linear regression.</p>
-        </div>
-      </div>
 
       <hr class="featurette-divider" id="theProcess">
 
@@ -252,17 +306,7 @@
         </div>
 
         <div class="row">
-          <div class="col-md-12" style="margin-bottom: 20px;">
-            <h3>(5) Creating Additional Categorical Variables</h3>
-            <p>It is clear from the visualization of average price against the day of the year that first three months of the year see lower average prices than the remainder of the year (with the exception of around New Years). Previously, this was incorporated into the model by including a categorical variable indicating whether each observation fell in this slump period. However, it can also be seen that even during the slump, it appears that some months (particularly January) are worse than others. Thus, we also create three new categorical variables for each of January, February, and March to incorporate more time-related nuance into the model.</p>
-            <p>We chose to preserve the quartile representation of zip codes and neighborhoods since we fear that including more specific indicators (such as for each zip code) would lead to drastic overfitting. On examining other approaches for the encoding of these variables, we come to realize that other clustering approaches such as K-means are not suited to this task since we are dealing with categorical data that can not be grouped well in a continuous fashion.</p>
-            <p>The relationship between the day of the week and the average difference in listing price from its mean is also very strong. Weekdays and Sunday are all similarly priced. However, Fridays and Saturdays average $3.50 more expensive than weeknights.</p>
-            <p>Indicators were also created for each of the property types, each of the room types, and each of the bed types. Since each of these categories has relatively few distinct values, it seems that creating one indicator for each distinct value is less likely to lead to severe overfitting or over-complication of the model. Nevertheless, it will be important to perform regularization to avoid potential overfitting.</p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-12" style="margin-bottom: 20px;"><h3>(6) Analyze Target Variable and Transforming the Data</h3></div>
+          <div class="col-md-12" style="margin-bottom: 20px;"><h3>(5) Analyze Target Variable and Transforming the Data</h3></div>
           <div class="col-md-6" style="margin-bottom: 20px;">
             <p>The target variable of "price" was analyzed to determine the variable's skewness. Histograms and boxplots were created to visualize the distribution of the target variable. These visualizations confirmed that price is highly skewed to the right. This indicates that the price variable contains several extreme outliers and the need to transform this variable to ensure that it is normally distributed and prepared for predictive modeling.</p>
             <img class="featurette-image img-responsive center-block" src="bootstrap-3.3.7/docs/images/logtransform.png" alt="Generic placeholder image">
@@ -318,6 +362,16 @@
               <img class="featurette-image img-responsive center-block" src="bootstrap-3.3.7/docs/images/wordcloud3.png" alt="Generic placeholder image">
             </center>
           </div>
+
+    <div class="row">
+          <div class="col-md-12" style="margin-bottom: 20px;">
+            <h3>Creating Additional Categorical Variables</h3>
+            <p>It is clear from the visualization of average price against the day of the year that first three months of the year see lower average prices than the remainder of the year (with the exception of around New Years). Previously, this was incorporated into the model by including a categorical variable indicating whether each observation fell in this slump period. However, it can also be seen that even during the slump, it appears that some months (particularly January) are worse than others. Thus, we also create three new categorical variables for each of January, February, and March to incorporate more time-related nuance into the model.</p>
+            <p>We chose to preserve the quartile representation of zip codes and neighborhoods since we fear that including more specific indicators (such as for each zip code) would lead to drastic overfitting. On examining other approaches for the encoding of these variables, we come to realize that other clustering approaches such as K-means are not suited to this task since we are dealing with categorical data that can not be grouped well in a continuous fashion.</p>
+            <p>The relationship between the day of the week and the average difference in listing price from its mean is also very strong. Weekdays and Sunday are all similarly priced. However, Fridays and Saturdays average $3.50 more expensive than weeknights.</p>
+            <p>Indicators were also created for each of the property types, each of the room types, and each of the bed types. Since each of these categories has relatively few distinct values, it seems that creating one indicator for each distinct value is less likely to lead to severe overfitting or over-complication of the model. Nevertheless, it will be important to perform regularization to avoid potential overfitting.</p>
+          </div>
+        </div>
 
           <h3>The Baseline Model</h3>
           <p>The modeling dataset was split into train and test datasets where 75% of the data was used for training.  The baseline simple linear regression model was developed on the training dataset consisting of 7.2 million records with 72 predictors.  This model resulted in an R^2 of 0.63 in the test dataset.  These initial baseline results supported our assumptions that the Airbnb prices can be effectively modeled.</p>
