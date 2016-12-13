@@ -61,6 +61,7 @@
                     <li role="separator" class="divider"></li>
                     <li class="dropdown-header">Download Project Code</li>
                     <li><a href="airbnb.ipynb" download>airbnb.ipynb</a></li>
+                    <li><a href="https://github.com/ryanwallace96/airbnb">or go to the github</a></li>
                   </ul>
                 </li>
               </ul>
@@ -88,7 +89,7 @@
             <div class="carousel-caption">
               <img src="bootstrap-3.3.7/docs/images/AirbnbLogo.png" style="width:500px;height:125px;">
               <h1>Pricing Prediction</h1>
-              <p>The decision of pricing a property on specific dates is a critical decision that every Airbnb client must address. This project data models the various factors that determine the price of an AirBnB rental in New York City.</p>
+              <p>The decision of pricing a property on specific dates is a critical decision that every Airbnb host must address. This project models the various factors that determine the price of an AirBnB rental in New York City.</p>
             </div>
           </div>
         </div>
@@ -97,7 +98,7 @@
           <div class="container">
             <div class="carousel-caption">
               <h1>Motivation</h1>
-              <p>New York City is a world class hub for tourism, business, and culture. With the influx of visitors coming into the city every day, finding fairly priced lodging is vital in the city. While hotels, motels, and hostels have traditionally occupied this space, AirBnB became a leading company in our new shared-economy to allow people to rent out their homes and apartments for short periods of times. However, pricing these rentals is no easy task, as multitudes of vriables can affect the going rate. Therefore, we decided to statistically model the variables that can affect the price of a rental property to estimate fair market pricing that could be made available to both renters and owners. </p>
+              <p>New York City is a world class hub for tourism, business, and culture. With the influx of visitors coming into the city every day, finding fairly priced lodging is vital in the city. While hotels, motels, and hostels have traditionally occupied this space, AirBnB became a leading company in our new shared-economy to allow people to rent out their homes and apartments for short periods of times. However, pricing these rentals is no easy task, as multitudes of variables can affect the going rate. Therefore, we decided to statistically model the variables that can affect the price of a rental property to estimate fair market pricing that could be made available to both renters and owners. </p>
             </div>
           </div>
         </div>
@@ -178,7 +179,7 @@
         <div class="col-md-7">
           <h2 class="featurette-heading">The Data. <span class="text-muted">It'll blow your mind.</span></h2>
           <p class="lead">Everything you need to know how we got the data, how we organized the data, and how we dealt with problems in the data. </p>
-          <p>The raw data from this website was collected from: <a href="http://data.beta.nyc/dataset/inside-airbnb-data">here</a></p>
+          <p>The raw data from this website was collected from: <a href="http://data.beta.nyc/dataset/inside-airbnb-data">InsideAirbnb</a></p>
           <p>The data was orginized into 3 categories: <u><b>Calendar</b></u>, <u><b>Reviews</b></u>, and <u><b>Listings</b></u>. Each of these categories contianed the various variables that identified the AirBnB property, as well as the relavent information that could potentially be a determining factor in the pricing of these factories. Some of the most relevant variables are on the word cloud to the right. </p>
           <h3>The Size of the Data</h3>
           <p>There is a total of about 27,000 listings in the listings data set, each with 52 features. The calendar dataset contains one entry for each day of the year for each of the approximately 27,000 listings. Thereviews dataset contains about 28,000 reviews for about 19,000 distinct listings.</p>
@@ -209,14 +210,15 @@
             <img class="featurette-image img-responsive center-block" src="bootstrap-3.3.7/docs/images/histogram1.png" alt="Generic placeholder image" style="float:left;width:50%">
             <img class="featurette-image img-responsive center-block" src="bootstrap-3.3.7/docs/images/histogram2.png" alt="Generic placeholder image" style="float:left;width:50%">
           </div>
-          <p>There are over fifty predictors in the listings dataset, both continuous and categorical. Histograms of the continuous variables of interest and lists of the most frequent categorical variables of interest are shown on the left. Interesting factors to note are that the majority of listings have one bedroom and one bathroom and that reviews are extremely left-skewed.</p>
+          <div>&nbsp;</div>
+          <p>There are over fifty predictors in the listings dataset, both continuous and categorical. Histograms of the continuous variables of interest and lists of the most frequent categorical variables of interest are shown on above. Interesting factors to note are that the majority of listings have one bedroom and one bathroom and that reviews are extremely left-skewed.</p>
         </div>
       
       
         <div class="row">
           <div class="col-md-12" style="margin-bottom: 20px;"><h3>(2) Visualize the Supply/Price of Airbnb Homes by Location</h3></div>
           <div class="col-md-5">
-            <p>We notice that in general, the overwhelming majority of rental properties are concentrated in the center of the grid (between 40.6 - 40.9 Latitude, and -73.8 - -74.1 Longitude. Outside of this dense range, we have sparse units in the outskirts of NYC which are predominantly listed under the 'unspecified' category for “neighborhood” and are in the lower end of the pricing spectrum.</p>
+            <p>We notice that in general, the overwhelming majority of rental properties are concentrated in the center of the grid (between 40.6 to 40.9 Latitude, and -73.8 to -74.1 Longitude). Outside of this dense range, we have sparse units in the outskirts of NYC which are predominantly listed under the 'unspecified' category for “neighborhood” and are in the lower end of the pricing spectrum.</p>
             <p>On the whole, the most expensive rentals are in the area around 40.7 Latitude and -74.0 Longitude. As we move outwards in all directions, prices generally become less expensive. One possible way that we could use this observation is to determine the epicenter in terms of high-priced housing, and then calculate the euclidean distance column for all points in the dataset and adding this distance into our model as a predictor. Additionally, we could use the neighborhood predictor variable in our model because the top 10 neighborhoods are each separate and extremely concentrated. We think it is logical to suspect that there will be clear differences between the neighborhoods of NYC, with clustering within the neighborhoods and at least some pricing separation between the neighborhoods. We see this in the average rental prices for each of the 191 neighborhoods in our dataset.</p>
           </div>
           <div class="col-md-7">
@@ -230,7 +232,7 @@
             <img class="featurette-image img-responsive center-block" src="bootstrap-3.3.7/docs/images/correlationsPriceFeatures.png" alt="Generic placeholder image">
           </div>
           <div class="col-md-6">
-            <p>The Pearson correlations between price and each feature variable of interest are plotted below in decreasing order of correlation. From the chart, we see that the basic physical features of the listings are most strongly linearly related with price: number of individuals accommodated, number of beds and bedrooms, and number of bathrooms have the highest correlation values. The strongest negative linear relationships with price are for the number of listings by the given host, number of reviews, and the longitude of the listing. These results all make intuitive sense. Hosts with many listings may be less attentive to their tenants, tenants may be more inclined to leave a negative review, and knowledge of the demographics of New York supports the observed negative relationship between price and longitude.</p>
+            <p>The Pearson correlations between price and each feature variable of interest are plotted left in decreasing order of correlation. From the chart, we see that the basic physical features of the listings are most strongly linearly related with price: number of individuals accommodated, number of beds and bedrooms, and number of bathrooms have the highest correlation values. The strongest negative linear relationships with price are for the number of listings by the given host, number of reviews, and the longitude of the listing. These results all make intuitive sense. Hosts with many listings may be less attentive to their tenants, tenants may be more inclined to leave a negative review, and knowledge of the demographics of New York supports the observed negative relationship between price and longitude.</p>
             <p>While studying these correlation values are useful, they only describe the magnitude of the linear relationship between price and the predictors, so the additional visual analysis is necessary.</p>
           </div>
         </div>
@@ -320,8 +322,8 @@
           <h3>The Baseline Model</h3>
           <p>The modeling dataset was split into train and test datasets where 75% of the data was used for training.  The baseline simple linear regression model was developed on the training dataset consisting of 7.2 million records with 72 predictors.  This model resulted in an R^2 of 0.63 in the test dataset.  These initial baseline results supported our assumptions that the Airbnb prices can be effectively modeled.</p>
           
-          <h3>Competative Models</h3>
-          <p>Due to the size of the dataset, the simple linear regression model required a significant amount of computational resources.  In order to produce competitive models that would be even more computationally expensive, we decided to reduce the size of the modeling dataset.  We created a random sample of one million records (~14% of the total modeling dataset). In order to tune the parameters, we preformed a 5-fold cross validation methodology on this sampled dataset.</p>
+          <h3>Competitive Models</h3>
+          <p>Due the high number of predictors (73 after encoding of categoricals), the possibility of overfitting is a concern. In response, we fit and tune ridge and lasso regressions. In order to produce competitive models that would be even more computationally expensive, we decided to reduce the size of the modeling dataset.  We created a random sample of one million records (~14% of the total modeling dataset). In order to tune the parameters, we preformed a 5-fold cross validation methodology on this sampled dataset.</p>
           
           <h3>Ridge Regression</h3>
           <div class="col-md-12">
@@ -329,9 +331,9 @@
               <img class="featurette-image img-responsive center-block" src="bootstrap-3.3.7/docs/images/ridgeRegression.png" alt="Generic placeholder image">
             </div>
             <div class="col-md-6" style="margin-top: 20px;">
-              <p>Due to the number of predictors that the modeling dataset contains, it is vital that we develop regularization models to reduce the number of predictors.  A list of tuning parameters for the Ridge and LASSO regression models were selected:</p>
+              <p>While ridge regression does not perform variable selection, its ability to shrink the coefficients on unimportant predictors may lead to less overfitting and improved performance out of sample. A list of tuning parameters for the Ridge and LASSO regression models were selected:</p>
               <code>lambda_lst = [1e-7, 1e-6, 1e-5, 1e-4, 1e-3, 1e-2, 1e-1, 1e0, 1e1, 1e2, 1e3, 1e4, 1e5, 1e6, 1e7]</code>
-              <p>The Ridge regression methodology was applied to the 5-fold cross validation datasets with the tuning parameters shown above.  This methodology resulted in an average R^2 of 0.64 on the test datasets.  Although this was a slight improvement on the baseline model, further modeling efforts were deemed necessary.</p>
+              <p>The ability of LASSO regression to control overfitting by performing variable selection through the zeroing of coefficients may provide improve test accuracy over the ridge model.  The Ridge regression methodology was applied to the 5-fold cross validation datasets with the tuning parameters shown above.  This methodology resulted in an average R^2 of 0.64 on the test datasets.  Although this was a slight improvement on the baseline model, further modeling efforts were deemed necessary.</p>
             </div>
           </div>
           
@@ -359,7 +361,7 @@
           <br>depths = np.arange(2, 10)
           <br>features = np.arange(5, 70, 20)</code>
 
-          <p>The Random Forest Regression model results in a max R^2 score of 0.80 on the test dataset.  This score is the result of applying each of the combinations of possible model criteria to the Random Forest Regression algorithm on a 5-fold cross validation dataset for 100 iterations.</p>
+          <p>The Random Forest Regression model results in a max R^2 score closer to 0.70 on the test dataset.  This score is the result of applying each of the combinations of possible model criteria to the Random Forest Regression algorithm on a 5-fold cross validation dataset.  The following figure illustrates the change in R^2 associated with tuning the random forest regression over the number of trees, maximum depth, and maximum number of features.</p>
 
           <img class="featurette-image img-responsive center-block" src="bootstrap-3.3.7/docs/images/forestRegression1.png" alt="Generic placeholder image">
 
@@ -384,7 +386,7 @@
 
           <p>This model resulted in an R^2 value of 0.91 on the test dataset for a 5-fold cross validation dataset.</p>
 
-          <p>For the final iteration of the model, we selected a maximum depth of 14 and the maximum number of features to be 25.  We want to have the fewest number of trees possible while maintaining model score to decrease training time. However, in order to get an accurate prediction interval with our quantile regression forests method, we need to use more trees (200) as explained by:</p>
+          <p>For the final iteration of the model, we selected a maximum depth of 14 and the maximum number of features to be 25.  We want to have the fewest number of trees possible while maintaining model score to decrease training time. However, in order to get an accurate prediction interval with our quantile regression forests method, we need to use more trees (1000) as explained by:</p>
           <p><a href="http://blog.datadive.net/prediction-intervals-for-random-forests/">http://blog.datadive.net/prediction-intervals-for-random-forests/</a></p>
           
           <img class="featurette-image img-responsive center-block" src="bootstrap-3.3.7/docs/images/forestRegression4.png" alt="Generic placeholder image">
