@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="bootstrap-3.3.7/docs/favicon.ico">
+
+    <title>Carousel Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap-3.3.7/docs/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="bootstrap-3.3.7/docs/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="bootstrap-3.3.7/docs/assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">AirBnB Pricing Prediction</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#aboutUs">About</a></li>
+                <li><a href="#citations">Citations</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Links and Download <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#theData">The Data</a></li>
+                    <li><a href="#theProcess">The Process</a></li>
+                    <li><a href="#theResults">The Results</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-header">Download Project Code</li>
+                    <li><a href="predictingPrices.ipynb" download>predictingPrices.ipynb</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img class="first-slide" src="bootstrap-3.3.7/docs/images/nycAtNight.jpg" alt="First slide" style="filter: brightness(50%);">
+          <div class="container">
+            <div class="carousel-caption">
+              <img src="bootstrap-3.3.7/docs/images/AirbnbLogo.png" style="width:500px;height:125px;">
+              <h1>Pricing Prediction</h1>
+              <p>The decision of pricing a property on specific dates is a critical decision that every Airbnb client must address. This project data models the various factors that determine the price of an AirBnB rental in New York City.</p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="second-slide" src="bootstrap-3.3.7/docs/images/statistics.jpg" alt="Second slide" style="filter: brightness(30%);">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Motivation</h1>
+              <p>New York City is a world class hub for tourism, business, and culture. With the influx of visitors coming into the city every day, finding fairly priced lodging is vital in the city. While hotels, motels, and hostels have traditionally occupied this space, AirBnB became a leading company in our new shared-economy to allow people to rent out their homes and apartments for short periods of times. However, pricing these rentals is no easy task, as multitudes of vriables can affect the going rate. Therefore, we decided to statistically model the variables that can affect the price of a rental property to estimate fair market pricing that could be made available to both renters and owners. </p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="third-slide" src="bootstrap-3.3.7/docs/images/cs109.jpg" alt="Third slide" style="filter: brightness(50%);">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Computer Science 109a</h1>
+              <p>An <b>Introduction to Data Science</b> course project done by:
+              <br> Ryan Wallace, James R Gearheart, Danny Zhuang, and Bob Saludo</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div><!-- /.carousel -->
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        
+
+        <!-- The data -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="bootstrap-3.3.7/docs/images/Data.jpg" alt="Generic placeholder image" width="140" height="140">
+          <h2>The Data</h2>
+          <p>"Data! Data! Data! I can’t make bricks without clay!"</p>
+          <p><em>- Sir Arthur Conan Doyle</em></p>
+          <p><a class="btn btn-default" href="#theData" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        
+
+
+        <!-- The Process -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="bootstrap-3.3.7/docs/images/process.jpg" alt="Generic placeholder image" width="140" height="140">
+          <h2>The Process</h2>
+          <p>"Data by itself is useless. Data is only useful if you apply it"</p>
+          <p><em>- Todd Park</em></p>
+          <p><a class="btn btn-default" href="#theProcess" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        
+
+
+        <!-- The Results -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="bootstrap-3.3.7/docs/images/results.jpg" alt="Generic placeholder image" width="140" height="140">
+          <h2>The Results</h2>
+          <p>"Facts are stubborn, but statistics are more pliable"</p>
+          <p>-<em>- Mark Twain</em></p>
+          <p><a class="btn btn-default" href="#theResults" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+      
+
+
+      </div><!-- /.row -->
+
+
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette" id="theData">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">The Data. <span class="text-muted">It'll blow your mind.</span></h2>
+          <p class="lead">Everything you need to know how we got the data, how we organized the data, and how we dealt with problems in the data. </p>
+          <p>The raw data from this website was collected from: <a href="http://data.beta.nyc/dataset/inside-airbnb-data">here</a></p>
+          <p>The data was orginized into 3 categories: <u><b>Calendar</b></u>, <u><b>Reviews</b></u>, and <u><b>Listings</b></u>. Each of these categories contianed the various variables that identified the AirBnB property, as well as the relavent information that could potentially be a determining factor in the pricing of these factories. Some of the most relevant variables are on the word cloud to the right. </p>
+          <h3>The Size of the Data</h3>
+          <p>There is a total of about 27,000 listings in the listings data set, each with 52 features. The calendar dataset contains one entry for each day of the year for each of the approximately 27,000 listings. Thereviews dataset contains about 28,000 reviews for about 19,000 distinct listings.</p>
+          <h3>Organizing the Data</h3>
+          <p>The data from the data.beta.nyc website returned data in CSV rows, which we were able to feed into the <a href="http://pandas.pydata.org/">Pandas</a> database. The input was pretty straight forward. However there were occasional formatting irregularities throughout the data that have been fixed. For example, some fields contained excess parentheses or string data types where floats or booleans are more appropriate. The price fields were originally encoded as strings with dollar signs and comma values. These were converted to floats for use in learning models.</p>
+        </div>
+        <div class="col-md-5" style="margin-top: 50px;">
+          <img class="featurette-image img-responsive center-block" src="bootstrap-3.3.7/docs/images/wordcloud.png" alt="Generic placeholder image">
+        </div>
+        <div class="col-md-12">
+          <h3>Filling in the Gaps of Missing Data</h3>
+          <p>While the datasets are nearly complete, there are a significant number of missing values. In the listings dataset, roughly 30% of all review scores, the vast majority of the square footage values, and low percentages of other listing characteristics are missing. In the calendar dataset, 28% of the listing dates do not have price information. In the reviews dataset, an insignificant number of comments are missing.</p>
+          <p>The missing values were handled in various ways to suit the nature of the data. Missing price data is a roadblock because it is inadvisable to attempt to impute missing response variables. Thus, records with missing price data are dropped. For categorical variables, it is imaginable that knowing which listings have descriptors absent is associated with the price (likely in a negative fashion). Therefore, missing categorical values were replaced with a new category &#39;unspecified&#39;. Missing review values were imputed with the global mean, as the correlation between price and the majority of review metrics is so low that attempting to use regression for imputation would be useless. Likewise, the data are too noisy for K-nearest neighbor to be of use. For other continuous feature variables such as bedrooms, bathrooms, and beds with relatively high correlation with price, missing values were imputed using linear regression.</p>
+        </div>
+      </div>
+
+      <hr class="featurette-divider" id="theProcess">
+
+      <div class="row featurette">
+        
+        <div class="col-md-12">
+          <h2 class="featurette-heading">The Process. <span class="text-muted">See for yourself.</span></h2>
+          <p class="lead">Visualize the data. Make sense of the data. Transform the data. Find trends and patterns in the data. </p>
+          <p>Now that we had collected, cleaned, and organized it into Pandas tables, we wanted to actually look at the data. Up until now, all we had were numbers and words, but with no real meaning behind them. In order to make sense of the data, we methodically looked for ways to visualize it by looking at the different features and distribution of the data, and trying to see if there were any correlation between these features. The process by which we did this analysis of data is outined below.</p>
+          <h3>(1) Identify Features and Distributions</h3>
+          <p>There are three potential response variables in the data, nightly price, weekly price, and monthly price. Since over half of the weekly and monthly price data are not present, it seems reasonable to focus on predicting nightly price. Nightly prices are right-skewed, with a few very high outliers. The majority of the prices are below 300 dollars per night. The price distribution looks approximately lognormal, so a log transformation of the price variable resulting in a normal distribution of prices may play better with regression techniques.</p>
+          <div class="imageContainer">
+            <img class="featurette-image img-responsive center-block" src="bootstrap-3.3.7/docs/images/histogram1.png" alt="Generic placeholder image" style="float:left;width:50%">
+            <img class="featurette-image img-responsive center-block" src="bootstrap-3.3.7/docs/images/histogram2.png" alt="Generic placeholder image" style="float:left;width:50%">
+          </div>
+          <p>There are over fifty predictors in the listings dataset, both continuous and categorical. Histograms of the continuous variables of interest and lists of the most frequent categorical variables of interest are shown on the left. Interesting factors to note are that the majority of listings have one bedroom and one bathroom and that reviews are extremely left-skewed.</p>
+        </div>
+      
+      
+        <div class="row">
+          <div class="col-md-12" style="margin-bottom: 20px;"><h3>(2) Visualize the Supply/Price of Airbnb Homes by Location</h3></div>
+          <div class="col-md-5">
+            <p>We notice that in general, the overwhelming majority of rental properties are concentrated in the center of the grid (between 40.6 - 40.9 Latitude, and -73.8 - -74.1 Longitude. Outside of this dense range, we have sparse units in the outskirts of NYC which are predominantly listed under the 'unspecified' category for “neighborhood” and are in the lower end of the pricing spectrum.</p>
+            <p>On the whole, the most expensive rentals are in the area around 40.7 Latitude and -74.0 Longitude. As we move outwards in all directions, prices generally become less expensive. One possible way that we could use this observation is to determine the epicenter in terms of high-priced housing, and then calculate the euclidean distance column for all points in the dataset and adding this distance into our model as a predictor. Additionally, we could use the neighborhood predictor variable in our model because the top 10 neighborhoods are each separate and extremely concentrated. We think it is logical to suspect that there will be clear differences between the neighborhoods of NYC, with clustering within the neighborhoods and at least some pricing separation between the neighborhoods. We see this in the average rental prices for each of the 191 neighborhoods in our dataset.</p>
+          </div>
+          <div class="col-md-7">
+            <img class="featurette-image img-responsive center-block" src="bootstrap-3.3.7/docs/images/nycMap.png" alt="Generic placeholder image">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12" style="margin-bottom: 20px;"><h3>(3) Identifying Correlations between Price and Features</h3></div>
+          <div class="col-md-6">
+            <img class="featurette-image img-responsive center-block" src="bootstrap-3.3.7/docs/images/correlationsPriceFeatures.png" alt="Generic placeholder image">
+          </div>
+          <div class="col-md-6">
+            <p>The Pearson correlations between price and each feature variable of interest are plotted below in decreasing order of correlation. From the chart, we see that the basic physical features of the listings are most strongly linearly related with price: number of individuals accommodated, number of beds and bedrooms, and number of bathrooms have the highest correlation values. The strongest negative linear relationships with price are for the number of listings by the given host, number of reviews, and the longitude of the listing. These results all make intuitive sense. Hosts with many listings may be less attentive to their tenants, tenants may be more inclined to leave a negative review, and knowledge of the demographics of New York supports the observed negative relationship between price and longitude.</p>
+            <p>While studying these correlation values are useful, they only describe the magnitude of the linear relationship between price and the predictors, so the additional visual analysis is necessary.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12" style="margin-bottom: 20px;">
+            <h3>(4) What is the Relationship between Price and Time?</h3>
+            <p>There are strong and interesting relationships between the prices of listings and both the time of year and the day of the week. Two different sets of statistics were computed to investigate these relationships. First, the simple average price over all the listings was calculated for each day of the year, and for each day of the week. Since this may overlook certain patterns, the differences between the price of a property on each day of the year and its average price throughout the year was also calculated, and averaged across all the properties for each day of the year.</p>
+            <p>Both sets of metrics show very similar trends. Late in the month of January is very cheap: all of the fifteen dates with the largest negative average difference from mean listing price occurred in the month of January. Most dates are up to $8 cheaper on average. In striking contrast, early January (presumably because of New Years celebrations) are the most expensive, with the first few days averaging over $10 more expensive than usual. The spring and early summer months are also more expensive by about 5 dollars on average for peak times.</p>
+            <p>The relationship between the day of the week and the average difference in listing price from its mean is also very strong. Weekdays and Sunday are all similarly priced. However, Fridays and Saturdays average $3.50 more expensive than weeknights.</p>
+            <p>When modeling the data in the results stage, it is clear that time (in terms of both date and day of the week) will be an important feature. The interaction between the date and day of the week may also prove helpful.</p>
+            <div class="imageContainer">
+              <img class="featurette-image img-responsive center-block" src="bootstrap-3.3.7/docs/images/scatter1.png" alt="Generic placeholder image" style="float:left;width:50%">
+              <img class="featurette-image img-responsive center-block" src="bootstrap-3.3.7/docs/images/scatter2.png" alt="Generic placeholder image" style="float:left;width:50%">
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12" style="margin-bottom: 20px;">
+            <h3>(5) Creating Additional Categorical Variables</h3>
+            <p>It is clear from the visualization of average price against the day of the year that first three months of the year see lower average prices than the remainder of the year (with the exception of around New Years). Previously, this was incorporated into the model by including a categorical variable indicating whether each observation fell in this slump period. However, it can also be seen that even during the slump, it appears that some months (particularly January) are worse than others. Thus, we also create three new categorical variables for each of January, February, and March to incorporate more time-related nuance into the model.</p>
+            <p>We chose to preserve the quartile representation of zip codes and neighborhoods since we fear that including more specific indicators (such as for each zip code) would lead to drastic overfitting. On examining other approaches for the encoding of these variables, we come to realize that other clustering approaches such as K-means are not suited to this task since we are dealing with categorical data that can not be grouped well in a continuous fashion.</p>
+            <p>The relationship between the day of the week and the average difference in listing price from its mean is also very strong. Weekdays and Sunday are all similarly priced. However, Fridays and Saturdays average $3.50 more expensive than weeknights.</p>
+            <p>Indicators were also created for each of the property types, each of the room types, and each of the bed types. Since each of these categories has relatively few distinct values, it seems that creating one indicator for each distinct value is less likely to lead to severe overfitting or over-complication of the model. Nevertheless, it will be important to perform regularization to avoid potential overfitting.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12" style="margin-bottom: 20px;"><h3>(6) Analyze Target Variable and Transforming the Data</h3></div>
+          <div class="col-md-6" style="margin-bottom: 20px;">
+            <p>The target variable of "price" was analyzed to determine the variable's skewness. Histograms and boxplots were created to visualize the distribution of the target variable. These visualizations confirmed that price is highly skewed to the right. This indicates that the price variable contains several extreme outliers and the need to transform this variable to ensure that it is normally distributed and prepared for predictive modeling.</p>
+            <img class="featurette-image img-responsive center-block" src="bootstrap-3.3.7/docs/images/logtransform.png" alt="Generic placeholder image">
+            <p>The "price" variable was log transformed and new visualizations were created to demonstrate the normal distribution of the log-transformed target variable. Boxplots were also created to demonstrate that the transformation contained the outliers. Several additional visualizations were created that plotted the log transformed target variable against several of the possible predictors. These are to the right.</p>
+            <img class="featurette-image img-responsive center-block" src="bootstrap-3.3.7/docs/images/boxtransform.png" alt="Generic placeholder image">
+          </div>
+          <div class="col-md-6">
+            <img class="featurette-image img-responsive center-block" src="bootstrap-3.3.7/docs/images/transform1.png" alt="Generic placeholder image">
+            <img class="featurette-image img-responsive center-block" src="bootstrap-3.3.7/docs/images/transform2.png" alt="Generic placeholder image">
+            <img class="featurette-image img-responsive center-block" src="bootstrap-3.3.7/docs/images/transform3.png" alt="Generic placeholder image">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12" style="margin-bottom: 20px;">
+            <h3>The Transformations and Interactions, and What they Tell Us About the Data</h3>
+            <p>Each of the continuous variables is plotted against the response variable, the log of price, in order to determine if there are significant non-linear relationships between the variables. From the plots, we see that a quadratic term for longitude, host listing count, and the value rating produce a more linear relationship with log price, so these transformations are generated.</p>
+            <p>Since an exhaustive search of possible interaction terms to include would roughly involve <img src="bootstrap-3.3.7/docs/images/number.png"> interactions to examine, this approach is not feasible computationally. Instead, we rely on our intuitive understanding of the relationships between the variables to anticipate which interaction terms would be meaningful. Using this approach, we include interactions for both weekend and holiday with both number of bedrooms and number of guests accommodated. This interaction seems potentially reasonable because one could imagine that in particularly high demand times, larger or more accommodating properties are especially valuable.</p>
+          </div>
+        </div>
+
+        
+      </div>
+  
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette" id="theResults">
+        <div class="col-md-12">
+          <h2 class="featurette-heading">The Results. <span class="text-muted">Checkmate.</span></h2>
+          <p class="lead">Build a model from the data. Understand what the model is telling us. </p>
+          <p>Now that we have a bit more of an intuitive understanding of what the data shows us, it was time to build a model that can help us predict AirBnB Prices. In order to build the model, our general approach involved some basic assumptions. Given these assumptions, we made a baseline model, and tested the baseline against a few other data models to see which model gives the most accurate pricing prediction, without overfitting the data. </p>
+          
+          <h3>General Modeling Approach and Assumptions Possibly Violated</h3>
+          <p>We choose to model our data by including a single observation for each listing for each day it is offered. This is potentially problematic for two reasons. Firstly, it violates OLS assumption that each observation is independent, because it is obvious that the listings for a given property on different days are highly dependent. Secondly, this may bias our regressions such that the relationships present in properties that are offered more regularly are more highly weighted.</p>
+          <p>Despite these potential violations, we maintain this data representation because it fully encodes the all of the information we have, both related to the properties, the time of year, and the relationship between properties and the time of year (which we exploit in creating some interaction variables, as described above). We feel that it is reasonable to potentially violate the i.i.d. assumption since the size of our data set is so large (millions of listings) compared to the size of the sets of dependent observations (maximum size of 365). Additionally, we feel that biasing the results towards properties that are more frequently offered is not necessarily detrimental, since we expect these types of properties to be offered more frequently in the future as well, leading to a potentially better performance on future test sets.</p>
+          
+          <h3>Building our Baseline Predictive Model</h3>
+          <p>For our baseline predictive model, we fit a linear regression model using the relevant features to predict price. However, the main hurdle in this task was massaging/manipulating each of the raw features so that we could fit our model while achieving interpretability and computational efficiency.</p>
+          <p>To incorporate the days of the week and holidays, we used the information that we gained from analyzing the average difference from the listing’s own mean price in visualizing how prices changed throughout the year. Ultimately, we found that the real increase in per-night rental costs came on Friday, Saturday, and around the New Years’ holidays. Additionally, we found that non-holiday dates in January and February showed the lowest prices, which we deem as “slump” dates. Thus, we made categorical variables to denote the day of the week (weekend or no weekend), holiday (3 days around New Years’), and slump dates (January and February dates that aren’t around New Years’).</p>
+          <p>Because the categorical variables of neighborhood and zip code have over 200 distinct values each, one-hot encoding would produce to far too many variables for a linear regression model – leading to long computational time and a small chance of over-fitting.  To solve this, we created four categorical variables for each of these features that separate the neighborhoods and zip codes by price into quartiles. Each quartile is its own categorical variables (e.g. most expensive 25% of neighborhoods, least expensive 25% of zip codes). Thus, we move away from trying to account for individual neighborhoods such as “Tribeca” separately and instead choose to analyze the most expensive neighborhoods together.  While we lose some degree of granularity, we believe that what is gained in computational efficiency and streamlined interpretability is well worth it.</p>
+          <p>The final modeling dataset consisted of the following <b><u>continuous</u></b> and <b><u>categorical</u></b> variables:</p>
+          <div class="col-md-6">
+            <center>
+              <h4>Continuous Variables</h4>
+              <img class="featurette-image img-responsive center-block" src="bootstrap-3.3.7/docs/images/wordcloud2.png" alt="Generic placeholder image">
+            </center>
+          </div>
+          <div class="col-md-6">
+            
+            <center>
+              <h4>Categorical Variables</h4>
+              <img class="featurette-image img-responsive center-block" src="bootstrap-3.3.7/docs/images/wordcloud3.png" alt="Generic placeholder image">
+            </center>
+          </div>
+
+          <h3>The Baseline Model</h3>
+          <p>The modeling dataset was split into train and test datasets where 75% of the data was used for training.  The baseline simple linear regression model was developed on the training dataset consisting of 7.2 million records with 72 predictors.  This model resulted in an R^2 of 0.63 in the test dataset.  These initial baseline results supported our assumptions that the Airbnb prices can be effectively modeled.</p>
+          
+          <h3>Competative Models</h3>
+          <p>Due to the size of the dataset, the simple linear regression model required a significant amount of computational resources.  In order to produce competitive models that would be even more computationally expensive, we decided to reduce the size of the modeling dataset.  We created a random sample of one million records (~14% of the total modeling dataset). In order to tune the parameters, we preformed a 5-fold cross validation methodology on this sampled dataset.</p>
+          
+          <h3>Ridge Regression</h3>
+          <div class="col-md-12">
+            <div class="col-md-6">
+              <img class="featurette-image img-responsive center-block" src="bootstrap-3.3.7/docs/images/ridgeRegression.png" alt="Generic placeholder image">
+            </div>
+            <div class="col-md-6" style="margin-top: 20px;">
+              <p>Due to the number of predictors that the modeling dataset contains, it is vital that we develop regularization models to reduce the number of predictors.  A list of tuning parameters for the Ridge and LASSO regression models were selected:</p>
+              <code>lambda_lst = [1e-7, 1e-6, 1e-5, 1e-4, 1e-3, 1e-2, 1e-1, 1e0, 1e1, 1e2, 1e3, 1e4, 1e5, 1e6, 1e7]</code>
+              <p>The Ridge regression methodology was applied to the 5-fold cross validation datasets with the tuning parameters shown above.  This methodology resulted in an average R^2 of 0.64 on the test datasets.  Although this was a slight improvement on the baseline model, further modeling efforts were deemed necessary.</p>
+            </div>
+          </div>
+          
+          <h3>LASSO Regression</h3>
+          <div class="col-md-12">
+            <div class="col-md-6">
+              <img class="featurette-image img-responsive center-block" src="bootstrap-3.3.7/docs/images/lassoRegression.png" alt="Generic placeholder image">
+            </div>
+            <div class="col-md-6" style="margin-top: 20px;">
+              <p>The LASSO regression method was applied to the 5-fold cross validation datasets with the same tuning parameters that we employed for the Ridge regression model.  This method was much more sensitive to the effects of the tuning parameters.  The tuning parameters 10-7 through 10-2 retained an average R^2 of 0.63 on the test datasets.  However, as the tuning parameters increased the model score drastically dropped to an R^2 of 0.0.</p>
+             
+              <p>The Ridge and the LASSO regularization models did not provide a significant lift over the baseline linear regression model.  The final model that was developed for predicting Airbnb prices was a Random Forest Regression model.  This model is also the most computationally expensive.</p>
+            </div>
+          </div>
+
+          <h3>Random Forest Regression</h3>
+          <p>Due to the computational expense of the Random Forest Regression model, the original modeling dataset of 7.2 million records was randomly sampled to create a dataset of 10 thousand records for an initial approach with this method.    The Random Forest Regression model was created by applying an AutoKFold Random Forest Regression method to the 10K observation subset of the modeling dataset.  This methodology applied several different levels to the input model criteria of “number of trees”, “tree depth” and “number of features”.  The final number of possible combinations of the model criteria was 96:</p>
+
+          <p>Number of Trees:   10, 40, 70
+          <br>Tree Max Depth:  2, 3, 4, 5, 6, 7, 8, 9
+          <br>Number of Features:  5, 25, 45, 65</p>
+
+          <code># Random forest regression with 10,000 observations
+          <br>n_trees = np.arange(10, 80, 30)  
+          <br>depths = np.arange(2, 10)
+          <br>features = np.arange(5, 70, 20)</code>
+
+          <p>The Random Forest Regression model results in a max R^2 score of 0.80 on the test dataset.  This score is the result of applying each of the combinations of possible model criteria to the Random Forest Regression algorithm on a 5-fold cross validation dataset for 100 iterations.</p>
+
+          <img class="featurette-image img-responsive center-block" src="bootstrap-3.3.7/docs/images/forestRegression1.png" alt="Generic placeholder image">
+
+          <p>This methodology provided a significant lift over the baseline linear regression model.  Due to the positive results of this approach, we increased the number of observations from 10 thousand to 100 thousand in order to determine the impact of the sampling size on the model’s predictive power.</p>
+
+          <p>The graphic above demonstrates that the number of trees doesn't significantly change the testing score based on the step-wise nature of the testing scores.   It is the maximum depth and maximum number of features that drive increased test scores so we tune exclusively for those and set the number of trees=40. We tune on 100,000 observations for run-time reasons.</p>
+
+          <p>The original modeling dataset of 7.2 million records and 72 predictors was randomly sampled to create a dataset of 100 thousand observations.  A Random Forest Regression model was applied to this dataset with the same model criteria as the previous Random Forest Regression model.  This model also resulted in a max R^2 of 0.80 on the test dataset created by a 5-fold cross validation methodology.</p>
+
+          <img class="featurette-image img-responsive center-block" src="bootstrap-3.3.7/docs/images/forestRegression2.png" alt="Generic placeholder image">
+
+          <p>It is recommended that for a random forest model the maximum number of features should be p/3 where p is the number of predictors.   Also, random forests cannot overfit the data with respect to the number of trees, so we should first select the best maximum depth and maximum number of features for some "big enough" value for number of trees, and then re-tune with fixed maximum depth and maximum features while varying the number of trees in order to find the minimum value for number of trees that gives us our best testing scores</p>
+
+          <p>So, we fixed the number of trees to be 40 and we increased the possible maximum tree depth from 10 to 40 (with intervals of 2) and we increased the maximum number of features by reducing the interval level from 20 to 10. This resulted in a 133 total number of possible combinations:</p>
+
+          <code># Random forest regression with 100,000 observations tuning max_depth and max_features
+          <br>n_trees = np.array([40])  
+          <br>depths = np.arange(2, 40, 2)
+          <br>features = np.arange(5, 70, 10)</code>
+
+          <img class="featurette-image img-responsive center-block" src="bootstrap-3.3.7/docs/images/forestRegression3.png" alt="Generic placeholder image">
+
+          <p>This model resulted in an R^2 value of 0.91 on the test dataset for a 5-fold cross validation dataset.</p>
+
+          <p>For the final iteration of the model, we selected a maximum depth of 14 and the maximum number of features to be 25.  We want to have the fewest number of trees possible while maintaining model score to decrease training time. However, in order to get an accurate prediction interval with our quantile regression forests method, we need to use more trees (200) as explained by:</p>
+          <p><a href="http://blog.datadive.net/prediction-intervals-for-random-forests/">http://blog.datadive.net/prediction-intervals-for-random-forests/</a></p>
+          
+          <img class="featurette-image img-responsive center-block" src="bootstrap-3.3.7/docs/images/forestRegression4.png" alt="Generic placeholder image">
+
+          <h3>The Final Model</h3>
+          <p>This final model results in an R^2 value of 0.92 on the test data created from the 5-fold cross validation method.  This tuned model was implemented on a sample of 1 million randomly sampled observations from the 7.2 million observation modeling dataset.  The final model was a Random Forest Regression model with 1000 trees, a maximum depth of 14 and maximum features of 25.  The dataset was split into 75% for the training dataset and 25% for the test dataset.  The results of the application of this model was an R^2 of 0.92.</p>
+          <p>We use the quantile regression forests method to build a 90% prediction interval around each of our predictions. The idea behind quantile regression forests is relatively straightforward. Treating the 1000 predictions from each of our trees as the distribution of our prediction, we use the 0.05 and 0.95 percentiles as the lower and upper bounds on our prediction interval. This prediction interval contains the true y_test value for approximate 80% to 90% of the test values.</p>
+
+          <h3>Conclusions and Future Work</h3>
+          <p>It is possible to estimate the price of Airbnb rentals in New York City on a given night with a high degree of accuracy using random forest regression. Prices are highly dependent on location, features of the listing, and time of the year and week.</p>
+          <p>A potential issue with the above approach is violation of the OLS independence assumption, which may lead to inflated R^2 values. Future work may focus on addressing the independence assumption using a multilayer model, and generalizing the results to other locales by using additional data sets.</p>
+          <p>The Airbnb price prediction model has to opportunity to be developed further by tuning the model to other locations and making the predictions public for Airbnb users.  Property owners could use the model results to competitively price their property while customers could use the model results to seek fair priced properties to rent.</p>
+        
+        </div>
+      </div>
+
+
+      <hr class="featurette-divider" id="aboutUs">
+
+      <div class="row featurette">
+        <div class="col-md-12">
+          <h2 class="featurette-heading">About Us. <span class="text-muted">Harvard CS109a Fall 2016 Class</span></h2>
+          <p class="lead">A project by the Harvard Introduction to Data Science Class</p>
+          <h3>Ryan Wallace</h3>
+          <h3>James R Gearheart</h3>
+          <h3>Danny Zhuang</h3>
+          <h3>Bob Saludo</h3>
+        </div>
+      </div>
+
+      <hr class="featurette-divider" id="citations">
+
+      <div class="row featurette">
+        <div class="col-md-12">
+          <h2 class="featurette-heading">Citations.<span class="text-muted"> And Links</span></h2>
+          <p class="lead">Giving crefit where credit is due</p>
+          <p>Murray Cox: Inside Airbnb. <a href="www.data.beta.nyc/dataset/inside­airbnb­data/resource">www.data.beta.nyc/dataset/inside­airbnb­data/resource</a> (2015)</p>
+          <p>Nick Amato: Predicting Airbnb Listing Prices with Scikit-Learn and Apache Spark. <a href="https://www.mapr.com/blog/predicting-airbnb-listing-prices-scikit-learn-and-apache-spark">https://www.mapr.com/blog/predicting-airbnb-listing-prices-scikit-learn-and-apache-spark</a> (2016)</p>
+          <p>Emily Tang, Kunal Sangani: Neighborhood and Price Prediction for San Francisco Airbnb Listings. (2015)</p>
+        </div>
+      </div>
+
+
+
+      <!-- /END THE FEATURETTES -->
+
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+      </footer>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="bootstrap-3.3.7/docs/assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="bootstrap-3.3.7/docs//dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="bootstrap-3.3.7/docs/assets/js/vendor/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap-3.3.7/docs/assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
