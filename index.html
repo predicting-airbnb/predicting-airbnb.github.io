@@ -45,7 +45,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#">AirBnB Pricing Prediction</a>
+              <a class="navbar-brand" href="#">Airbnb Pricing Prediction</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
@@ -89,7 +89,7 @@
             <div class="carousel-caption">
               <img src="bootstrap-3.3.7/docs/images/AirbnbLogo.png" style="width:500px;height:125px;">
               <h1>Pricing Prediction</h1>
-              <p>The decision of pricing a property on specific dates is a critical decision that every Airbnb host must address. This project models the various factors that determine the price of an AirBnB rental in New York City.</p>
+              <p>The decision of pricing a property on specific dates is a critical decision that every Airbnb host must address. This project models the various factors that determine the price of an Airbnb rental in New York City.</p>
             </div>
           </div>
         </div>
@@ -176,7 +176,7 @@
       <hr class="featurette-divider">
         <div class="row featurette" id="theData">
           <div class="col-md-12">
-            <h2 class="featurette-heading">Overview</h2>
+            <h2 class="featurette-heading">Overview.</h2>
             <p>Airbnb is a peer-to-peer online marketplace and homestay network enabling people to list or rent short-term lodging in residential properties, with the cost of such accommodation set by the property owner.  With thousands of property owners listing their property for short-term lodging, the marketplace for lodging has become very competitive. The success of Airbnb can be attributed to the information, decision power and functionality that it places in the hands of property owners.   In order to be competitive in the marketplace, it is essential that property owners have the most up to date information about the housing market.  This information must be catered to the specific location, property type and lease date for their property.</p>
             <p>
             The decision of pricing a property on specific dates is a critical decision that every Airbnb client must address.  The housing market is volatile.  Per Diem rates can have extreme fluctuations from day to day and these fluctuations can be based on several factors such as day of week, month, holidays, local events, competitor’s prices along with hundreds of other possible factors.
@@ -187,12 +187,12 @@
 
         <div class="row featurette" id="theData">
           <div class="col-md-12">
-            <h2 class="featurette-heading">Literature Review:</h2>
-            <p>Since the inception of “shared economy”, there have been dozens of articles and scholarly papers written about Airbnb along with other peer-to-peer homestay networking sites.  Although the researchers of this project reviewed several of these papers, we present the detailed overview of two of the most relevant papers for this literature review:</p>
+            <h2 class="featurette-heading">Literature Review.</h2>
+            <p>Since the inception of “shared economy”, there have been dozens of articles and scholarly papers written about Airbnb along with other peer-to-peer homestay networking sites.  Although the researchers of this project reviewed several of these papers, we present detailed overviews of two of the most relevant papers for this literature review:</p>
 
             <h3><a href="https://www.mapr.com/blog/predicting-airbnb-listing-prices-scikit-learn-and-apache-spark">Predicting Airbnb Listing Prices with Scikit-Learn and Apache Spark</a></h3>
             <p></p>
-            <p>The online article titled “Predicting Airbnb Listing Prices with Scikit-Learn and Apache Spark” by Nick Amato was published on April 20th, 2016 on the Mapr blog site.  This article details the construction of a predictive model using python’s Scikit-Learn package in combination with Apache Spark for performance enhancement.  This model leverages the publically available dataset titled “Inside Airbnb” published by Airbnb and focuses on the San Francisco area.</p>
+            <p>The online article titled "Predicting Airbnb Listing Prices with Scikit-Learn and Apache Spark" by Nick Amato was published on April 20th, 2016 on the Mapr blog site.  This article details the construction of a predictive model using python’s Scikit-Learn package in combination with Apache Spark for performance enhancement.  This model leverages the publically available dataset titled “Inside Airbnb” published by Airbnb and focuses on the San Francisco area.</p>
 
             <p>
             The article walks the reader through the step-by-step process of building and evaluating a predictive model using publically available data.  In the first section, the author explains the available data sources and provides python code for accessing and evaluating some core features of the data. This initial analysis demonstrates the raw nature of the data and the need to clean the data.  In order to create a concise model, the author limits the data to Airbnb listings in the San Francisco area with one bedroom.  This filter captures the majority of the available listings and limits the possible complex interactions involved in a broad study of all listing types.    
@@ -204,12 +204,13 @@
 
             <p>The next step is to implement a model tuning algorithm.  For this process, the author uses the GridSearchCV function from the Scikit-Learn package.  The GridSearchCV function is an ensemble model that explores a large variety of hyperparameters  through an exhaustive search process.  This process tries all the supplied parameter combinations and uses cross-validation to find the best one.  The concern with this approach is that it requires a lot of CPU processing power and time.  In order to process the exhaustive grid search efficiently, the author uses Apache Spark to distribute the process across several machines and cores.  The author uses the GradientBosstingRegressor predictive model in combination with the GridSearchCV cross-validation technique on the Apache Spark system to achieve an error rate of $21.43.</p>
 
-            <p>Conclusion</p>
+            <p><big>Conclusion:</big></p>
+
             <p>This article provided an excellent step-by-step look at developing several predictive models and assessing the accuracy of those models.  The author also demonstrated how Apache Spark can be leveraged to increase processing efficiency and allow the full range of exhaustive search methods to be employed in model development.</p>
 
             <h3><a href="http://cs229.stanford.edu/proj2015/236_report.pdf">Neighborhood and Price Prediction for San Francisco Airbnb Listings</a></h3>
 
-            <p>In ``Neighborhood and Price Prediction for San Francisco Airbnb Listings'', Tang and Sangani explore data from the Inside Airbnb project, containing a complete set of 7,029 listings of properties for rent on Airbnb in San Francisco as of November 2, 2015. For each listing, the data set contains the price per night, text information, such as the name of the listing and a description of the property and host, an image of the property, and a number fields describing quantifiable attributes of the property, such as amenities offered and square-footage. With these data, the authors seek to predict two attributes of a listing, the price per night, and the neighborhood in which the property is located. </p>
+            <p>In "Neighborhood and Price Prediction for San Francisco Airbnb Listings", Tang and Sangani explore data from the Inside Airbnb project, containing a complete set of 7,029 listings of properties for rent on Airbnb in San Francisco as of November 2, 2015. For each listing, the data set contains the price per night, text information, such as the name of the listing and a description of the property and host, an image of the property, and a number fields describing quantifiable attributes of the property, such as amenities offered and square-footage. With these data, the authors seek to predict two attributes of a listing, the price per night, and the neighborhood in which the property is located. </p>
 
             <p>The authors choose these metrics for their potential usefulness to Airbnb's platform. In particular, predicting price may allow Airbnb to offer improved suggested pricing for hosts ready to list while predicting neighborhood could provide a first step towards recommending new properties to clients based on where they have stayed in the past. The authors make several interesting decisions about how to approach the tasks of predicting price and neighborhood. 
             </p>
@@ -222,7 +223,7 @@
 
             <p>After creating a feature vector for each listing, two support vector machine models are trained to predict each of the response variables. The choice of SVM classifier is not explained; although, given the large number of features, the choice seems reasonable. Nevertheless, alternative methods may be worth investigation. Two major adjustments are needed to improve the models. First, the optimal value of the regularization parameter is experimentally determined by grid search. Second, high variance in the initial model indicates that overfitting is likely. In order to combat this, the authors use the Recursive Feature Elimination functionality in sklearn to reduce the degrees of freedom in the SVM. </p>
 
-            <p>Conclusion</p>
+            <p><big>Conclusion:</big></p>
 
             <p>The final models for both price and neighborhood have impressive predictive power. In the test set, prices are categorized to the correct group (either above or below the median) with approximately 81% accuracy, while neighborhoods are categorized with 42% accuracy. While this performance seems good, the authors note that discretization of the predicted price into smaller bins is likely necessary for most applications, and is a promising direction for future work.</p>
 
@@ -234,9 +235,9 @@
             <h2 class="featurette-heading">The Data. <span class="text-muted">It'll blow your mind.</span></h2>
             <p class="lead">Everything you need to know how we got the data, how we organized the data, and how we dealt with problems in the data. </p>
             <p>The raw data from this website was collected from: <a href="http://data.beta.nyc/dataset/inside-airbnb-data">InsideAirbnb</a></p>
-            <p>The data was orginized into 3 categories: <u><b>Calendar</b></u> and <u><b>Listings</b></u>. Each of these categories contianed the various variables that identified the AirBnB property, as well as the relavent information that could potentially be a determining factor in the pricing of these factories. Some of the most relevant variables are on the word cloud to the right. </p>
+            <p>The data was orginized into two categories: <u><b>Lisings</b></u> and <u><b>Calendar</b></u>. The listings data set contained descriptions of the physical, geographical, and host-related attributes of each property listed in New York City in 2015. The calendar data set contained records of the nightly prices throughout 2015 of the majority of the listings. Both encoded relavent information that could potentially be determining factors in the pricing of these properties. Some of the most relevant variables are on the word cloud to the right. </p>
             <h3>The Size of the Data</h3>
-            <p>There is a total of about 27,000 listings in the listings data set, each with 52 features. The calendar dataset contains one entry for each day of the year for each of the approximately 27,000 listings.</p>
+            <p>There is a total of about 27,000 listings in the listings data set, each with 52 features. The calendar dataset contains one entry for each day of the year the property was listed for each of the approximately 27,000 listings.</p>
             <h3>Organizing the Data</h3>
             <p>The data from the data.beta.nyc website returned data in CSV rows, which we were able to feed into the <a href="http://pandas.pydata.org/">Pandas</a> database. The input was pretty straight forward. However there were occasional formatting irregularities throughout the data that have been fixed. For example, some fields contained excess parentheses or string data types where floats or booleans are more appropriate. The price fields were originally encoded as strings with dollar signs and comma values. These were converted to floats for use in learning models.</p>
           </div>
@@ -258,19 +259,19 @@
           <h2 class="featurette-heading">The Process. <span class="text-muted">See for yourself.</span></h2>
           <p class="lead">Visualize the data. Make sense of the data. Transform the data. Find trends and patterns in the data. </p>
           <p>Now that we had collected, cleaned, and organized it into Pandas tables, we wanted to actually look at the data. Up until now, all we had were numbers and words, but with no real meaning behind them. In order to make sense of the data, we methodically looked for ways to visualize it by looking at the different features and distribution of the data, and trying to see if there were any correlation between these features. The process by which we did this analysis of data is outined below.</p>
-          <h3>(1) Identify Features and Distributions</h3>
+          <h3>(1) Identifying Features and Distributions</h3>
           <p>There are three potential response variables in the data, nightly price, weekly price, and monthly price. Since over half of the weekly and monthly price data are not present, it seems reasonable to focus on predicting nightly price. Nightly prices are right-skewed, with a few very high outliers. The majority of the prices are below 300 dollars per night. The price distribution looks approximately lognormal, so a log transformation of the price variable resulting in a normal distribution of prices may play better with regression techniques.</p>
           <div class="imageContainer">
             <img class="featurette-image img-responsive center-block" src="bootstrap-3.3.7/docs/images/histogram1.png" alt="Generic placeholder image" style="float:left;width:50%">
             <img class="featurette-image img-responsive center-block" src="bootstrap-3.3.7/docs/images/histogram2.png" alt="Generic placeholder image" style="float:left;width:50%">
           </div>
           <div>&nbsp;</div>
-          <p>There are over fifty predictors in the listings dataset, both continuous and categorical. Histograms of the continuous variables of interest and lists of the most frequent categorical variables of interest are shown on above. Interesting factors to note are that the majority of listings have one bedroom and one bathroom and that reviews are extremely left-skewed.</p>
+          <p>There are over fifty predictors in the listings dataset, both continuous and categorical. Histograms of some the continuous variables of interest are shown on above. Interesting factors to note are that the majority of listings have one bedroom and one bathroom and that reviews are extremely left-skewed.</p>
         </div>
       
       
         <div class="row">
-          <div class="col-md-12" style="margin-bottom: 20px;"><h3>(2) Visualize the Supply/Price of Airbnb Homes by Location</h3></div>
+          <div class="col-md-12" style="margin-bottom: 20px;"><h3>(2) Visualizing the Supply and Price of Airbnb Homes by Location</h3></div>
           <div class="col-md-5">
             <p>We notice that in general, the overwhelming majority of rental properties are concentrated in the center of the grid (between 40.6 to 40.9 Latitude, and -73.8 to -74.1 Longitude). Outside of this dense range, we have sparse units in the outskirts of NYC which are predominantly listed under the 'unspecified' category for “neighborhood” and are in the lower end of the pricing spectrum.</p>
             <p>On the whole, the most expensive rentals are in the area around 40.7 Latitude and -74.0 Longitude. As we move outwards in all directions, prices generally become less expensive. One possible way that we could use this observation is to determine the epicenter in terms of high-priced housing, and then calculate the euclidean distance column for all points in the dataset and adding this distance into our model as a predictor. Additionally, we could use the neighborhood predictor variable in our model because the top 10 neighborhoods are each separate and extremely concentrated. We think it is logical to suspect that there will be clear differences between the neighborhoods of NYC, with clustering within the neighborhoods and at least some pricing separation between the neighborhoods. We see this in the average rental prices for each of the 191 neighborhoods in our dataset.</p>
@@ -293,7 +294,7 @@
 
         <div class="row">
           <div class="col-md-12" style="margin-bottom: 20px;">
-            <h3>(4) What is the Relationship between Price and Time?</h3>
+            <h3>(4) Vizualizing the Relationship between Price and Time</h3>
             <p>There are strong and interesting relationships between the prices of listings and both the time of year and the day of the week. Two different sets of statistics were computed to investigate these relationships. First, the simple average price over all the listings was calculated for each day of the year, and for each day of the week. Since this may overlook certain patterns, the differences between the price of a property on each day of the year and its average price throughout the year was also calculated, and averaged across all the properties for each day of the year.</p>
             <p>Both sets of metrics show very similar trends. Late in the month of January is very cheap: all of the fifteen dates with the largest negative average difference from mean listing price occurred in the month of January. Most dates are up to $8 cheaper on average. In striking contrast, early January (presumably because of New Years celebrations) are the most expensive, with the first few days averaging over $10 more expensive than usual. The spring and early summer months are also more expensive by about 5 dollars on average for peak times.</p>
             <p>The relationship between the day of the week and the average difference in listing price from its mean is also very strong. Weekdays and Sunday are all similarly priced. However, Fridays and Saturdays average $3.50 more expensive than weeknights.</p>
@@ -306,7 +307,7 @@
         </div>
 
         <div class="row">
-          <div class="col-md-12" style="margin-bottom: 20px;"><h3>(5) Analyze Target Variable and Transforming the Data</h3></div>
+          <div class="col-md-12" style="margin-bottom: 20px;"><h3>(5) Analyzing the Target Variable</h3></div>
           <div class="col-md-6" style="margin-bottom: 20px;">
             <p>The target variable of "price" was analyzed to determine the variable's skewness. Histograms and boxplots were created to visualize the distribution of the target variable. These visualizations confirmed that price is highly skewed to the right. This indicates that the price variable contains several extreme outliers and the need to transform this variable to ensure that it is normally distributed and prepared for predictive modeling.</p>
             <img class="featurette-image img-responsive center-block" src="bootstrap-3.3.7/docs/images/logtransform.png" alt="Generic placeholder image">
@@ -322,7 +323,7 @@
 
         <div class="row">
           <div class="col-md-12" style="margin-bottom: 20px;">
-            <h3>The Transformations and Interactions, and What they Tell Us About the Data</h3>
+            <h3>(6) Creating Transformations and Interactions, and What they Tell Us About the Data</h3>
             <p>Each of the continuous variables is plotted against the response variable, the log of price, in order to determine if there are significant non-linear relationships between the variables. From the plots, we see that a quadratic term for longitude, host listing count, and the value rating produce a more linear relationship with log price, so these transformations are generated.</p>
             <p>Since an exhaustive search of possible interaction terms to include would roughly involve <img src="bootstrap-3.3.7/docs/images/number.png"> interactions to examine, this approach is not feasible computationally. Instead, we rely on our intuitive understanding of the relationships between the variables to anticipate which interaction terms would be meaningful. Using this approach, we include interactions for both weekend and holiday with both number of bedrooms and number of guests accommodated. This interaction seems potentially reasonable because one could imagine that in particularly high demand times, larger or more accommodating properties are especially valuable.</p>
           </div>
@@ -336,18 +337,20 @@
 
       <div class="row featurette" id="theResults">
         <div class="col-md-12">
-          <h2 class="featurette-heading">The Results. <span class="text-muted">Checkmate.</span></h2>
+          <h2 class="featurette-heading">Modelling and Results. <span class="text-muted">Checkmate.</span></h2>
           <p class="lead">Build a model from the data. Understand what the model is telling us. </p>
-          <p>Now that we have a bit more of an intuitive understanding of what the data shows us, it was time to build a model that can help us predict AirBnB Prices. In order to build the model, our general approach involved some basic assumptions. Given these assumptions, we made a baseline model, and tested the baseline against a few other data models to see which model gives the most accurate pricing prediction, without overfitting the data. </p>
+          <p>Now that we have a bit more of an intuitive understanding of what the data shows us, it was time to build a model that can help us predict Airbnb prices. In order to build the model, our general approach involved some basic assumptions. Given these assumptions, we made a baseline model, and tested the baseline against a few other data models to see which model gives the most accurate pricing prediction, without overfitting the data. </p>
           
           <h3>General Modeling Approach and Assumptions Possibly Violated</h3>
           <p>We choose to model our data by including a single observation for each listing for each day it is offered. This is potentially problematic for two reasons. Firstly, it violates OLS assumption that each observation is independent, because it is obvious that the listings for a given property on different days are highly dependent. Secondly, this may bias our regressions such that the relationships present in properties that are offered more regularly are more highly weighted.</p>
           <p>Despite these potential violations, we maintain this data representation because it fully encodes the all of the information we have, both related to the properties, the time of year, and the relationship between properties and the time of year (which we exploit in creating some interaction variables, as described above). We feel that it is reasonable to potentially violate the i.i.d. assumption since the size of our data set is so large (millions of listings) compared to the size of the sets of dependent observations (maximum size of 365). Additionally, we feel that biasing the results towards properties that are more frequently offered is not necessarily detrimental, since we expect these types of properties to be offered more frequently in the future as well, leading to a potentially better performance on future test sets.</p>
           
-          <h3>Building our Baseline Predictive Model</h3>
-          <p>For our baseline predictive model, we fit a linear regression model using the relevant features to predict price. However, the main hurdle in this task was massaging/manipulating each of the raw features so that we could fit our model while achieving interpretability and computational efficiency.</p>
-          <p>To incorporate the days of the week and holidays, we used the information that we gained from analyzing the average difference from the listing’s own mean price in visualizing how prices changed throughout the year. Ultimately, we found that the real increase in per-night rental costs came on Friday, Saturday, and around the New Years’ holidays. Additionally, we found that non-holiday dates in January and February showed the lowest prices, which we deem as “slump” dates. Thus, we made categorical variables to denote the day of the week (weekend or no weekend), holiday (3 days around New Years’), and slump dates (January and February dates that aren’t around New Years’).</p>
-          <p>Because the categorical variables of neighborhood and zip code have over 200 distinct values each, one-hot encoding would produce to far too many variables for a linear regression model – leading to long computational time and a small chance of over-fitting.  To solve this, we created four categorical variables for each of these features that separate the neighborhoods and zip codes by price into quartiles. Each quartile is its own categorical variables (e.g. most expensive 25% of neighborhoods, least expensive 25% of zip codes). Thus, we move away from trying to account for individual neighborhoods such as “Tribeca” separately and instead choose to analyze the most expensive neighborhoods together.  While we lose some degree of granularity, we believe that what is gained in computational efficiency and streamlined interpretability is well worth it.</p>
+          <h3>Categorical Variables and Encodings</h3>
+          <p> Before fitting any models, it is essential to massaging each of the raw features in a way that is technically rigorous, while achieving interpretability and computational efficiency.</p>
+          <p>To incorporate the days of the week and holidays, we used the information that we gained from analyzing the average difference from the listing’s own mean price in visualizing how prices changed throughout the year. Ultimately, we found that the real increase in per-night rental costs came on Friday, Saturday, and around the New Years’ holidays. Additionally, we found that non-holiday dates in January and February showed the lowest prices, which we deem as “slump” dates. Thus, we made categorical variables to denote the day of the week (weekend or no weekend), holiday (3 days around New Years’), and slump dates (January and February dates that aren’t around New Years’), as well as individual categoricals for each of January, February, and March to incorporate variability within the slump period.</p>
+          <p>Because the categorical variables of neighborhood and zip code have over 200 distinct values each, one-hot encoding would produce to far too many variables for a linear regression model – leading to long computational time and a small chance of over-fitting.  To solve this, we created four categorical variables for each of these features that separate the neighborhoods and zip codes by price into quartiles. Each quartile is its own categorical variables (e.g. most expensive 25% of neighborhoods, least expensive 25% of zip codes). Thus, we move away from trying to account for individual neighborhoods such as “Tribeca” separately and instead choose to analyze the most expensive neighborhoods together.  While we lose some degree of granularity, we believe that what is gained in computational efficiency and streamlined interpretability is well worth it.  On examining other approaches for the encoding of these variables, we come to realize that more sophisticated clustering approaches such as K-means are not suited to this task since we are dealing with categorical data that can not be grouped well in a continuous fashion.</p>
+          <p>Indicators were also created for each of the property types, each of the room types, and each of the bed types. Since each of these categories has relatively few distinct values, it seems that creating one indicator for each distinct value is less likely to lead to severe overfitting or over-complication of the model. Nevertheless, it will be important to perform regularization to avoid potential overfitting.</p>
+
           <p>The final modeling dataset consisted of the following <b><u>continuous</u></b> and <b><u>categorical</u></b> variables:</p>
           <div class="col-md-6">
             <center>
@@ -365,16 +368,10 @@
 
     <div class="row">
           <div class="col-md-12" style="margin-bottom: 20px;">
-            <h3>Creating Additional Categorical Variables</h3>
-            <p>It is clear from the visualization of average price against the day of the year that first three months of the year see lower average prices than the remainder of the year (with the exception of around New Years). Previously, this was incorporated into the model by including a categorical variable indicating whether each observation fell in this slump period. However, it can also be seen that even during the slump, it appears that some months (particularly January) are worse than others. Thus, we also create three new categorical variables for each of January, February, and March to incorporate more time-related nuance into the model.</p>
-            <p>We chose to preserve the quartile representation of zip codes and neighborhoods since we fear that including more specific indicators (such as for each zip code) would lead to drastic overfitting. On examining other approaches for the encoding of these variables, we come to realize that other clustering approaches such as K-means are not suited to this task since we are dealing with categorical data that can not be grouped well in a continuous fashion.</p>
-            <p>The relationship between the day of the week and the average difference in listing price from its mean is also very strong. Weekdays and Sunday are all similarly priced. However, Fridays and Saturdays average $3.50 more expensive than weeknights.</p>
-            <p>Indicators were also created for each of the property types, each of the room types, and each of the bed types. Since each of these categories has relatively few distinct values, it seems that creating one indicator for each distinct value is less likely to lead to severe overfitting or over-complication of the model. Nevertheless, it will be important to perform regularization to avoid potential overfitting.</p>
+            <h3>The Baseline Model</h3>
+            <p>The modeling dataset described above was split into train and test datasets where 75% of the data was used for training.  For our baseline predictive model, we fit a linear regression model using all of the features to predict price.  This baseline regression was trained on a dataset consisting of 7.2 million records with 72 predictors.  The model resulted in an R^2 of 0.63 in the test dataset.  These initial baseline results supported our assumptions that the Airbnb prices can be effectively modeled. Nevertheless, we are confident that more sophisticated techniques may improve performance.</p>
           </div>
         </div>
-
-          <h3>The Baseline Model</h3>
-          <p>The modeling dataset was split into train and test datasets where 75% of the data was used for training.  The baseline simple linear regression model was developed on the training dataset consisting of 7.2 million records with 72 predictors.  This model resulted in an R^2 of 0.63 in the test dataset.  These initial baseline results supported our assumptions that the Airbnb prices can be effectively modeled.</p>
           
           <h3>Competitive Models</h3>
           <p>Due the high number of predictors (73 after encoding of categoricals), the possibility of overfitting is a concern. In response, we fit and tune ridge and lasso regressions. In order to produce competitive models that would be even more computationally expensive, we decided to reduce the size of the modeling dataset.  We created a random sample of one million records (~14% of the total modeling dataset). In order to tune the parameters, we preformed a 5-fold cross validation methodology on this sampled dataset.</p>
@@ -410,31 +407,25 @@
           <br>Tree Max Depth:  2, 3, 4, 5, 6, 7, 8, 9
           <br>Number of Features:  5, 25, 45, 65</p>
 
-          <code># Random forest regression with 10,000 observations
-          <br>n_trees = np.arange(10, 80, 30)  
-          <br>depths = np.arange(2, 10)
-          <br>features = np.arange(5, 70, 20)</code>
-
           <p>The Random Forest Regression model results in a max R^2 score closer to 0.70 on the test dataset.  This score is the result of applying each of the combinations of possible model criteria to the Random Forest Regression algorithm on a 5-fold cross validation dataset.  The following figure illustrates the change in R^2 associated with tuning the random forest regression over the number of trees, maximum depth, and maximum number of features.</p>
 
           <img class="featurette-image img-responsive center-block" src="bootstrap-3.3.7/docs/images/forestRegression1.png" alt="Generic placeholder image">
 
           <p>This methodology provided a significant lift over the baseline linear regression model.  Due to the positive results of this approach, we increased the number of observations from 10 thousand to 100 thousand in order to determine the impact of the sampling size on the model’s predictive power.</p>
 
-          <p>The graphic above demonstrates that the number of trees doesn't significantly change the testing score based on the step-wise nature of the testing scores.   It is the maximum depth and maximum number of features that drive increased test scores so we tune exclusively for those and set the number of trees=40. We tune on 100,000 observations for run-time reasons.</p>
-
-          <p>The original modeling dataset of 7.2 million records and 72 predictors was randomly sampled to create a dataset of 100 thousand observations.  A Random Forest Regression model was applied to this dataset with the same model criteria as the previous Random Forest Regression model.  This model also resulted in a max R^2 of 0.80 on the test dataset created by a 5-fold cross validation methodology.</p>
+          <p>The graphic above demonstrates that the number of trees doesn't significantly change the testing score based on the step-wise nature of the testing scores; the maximum depth and maximum number of features primarily drive increased test scores. Using the same tuning values as above, less the 70 trees option, but sampling now for 100,000 observations, we observe the tuning R^2 values in 5-fold cross validation plotted below.</p>
 
           <img class="featurette-image img-responsive center-block" src="bootstrap-3.3.7/docs/images/forestRegression2.png" alt="Generic placeholder image">
+
+          <p>From this, we note that increasing the number of training observations resulted in a significant increase in the tuned R^2 from around 0.7 to 0.8 on the test dataset.</p>
 
           <p>It is recommended that for a random forest model the maximum number of features should be p/3 where p is the number of predictors.   Also, random forests cannot overfit the data with respect to the number of trees, so we should first select the best maximum depth and maximum number of features for some "big enough" value for number of trees, and then re-tune with fixed maximum depth and maximum features while varying the number of trees in order to find the minimum value for number of trees that gives us our best testing scores</p>
 
           <p>So, we fixed the number of trees to be 40 and we increased the possible maximum tree depth from 10 to 40 (with intervals of 2) and we increased the maximum number of features by reducing the interval level from 20 to 10. This resulted in a 133 total number of possible combinations:</p>
 
-          <code># Random forest regression with 100,000 observations tuning max_depth and max_features
-          <br>n_trees = np.array([40])  
-          <br>depths = np.arange(2, 40, 2)
-          <br>features = np.arange(5, 70, 10)</code>
+          <p>Number of Trees:   40
+          <br>Tree Max Depth:  2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40
+          <br>Number of Features: 5, 15, 25, 35, 45, 55, 65</p>
 
           <img class="featurette-image img-responsive center-block" src="bootstrap-3.3.7/docs/images/forestRegression3.png" alt="Generic placeholder image">
 
